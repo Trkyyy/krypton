@@ -23,7 +23,7 @@ public class ConnectionMixin implements ClientConnectionEncryptionExtension {
 
     @Override
     public void setupEncryption(SecretKey key) throws GeneralSecurityException {
-        if (this.kryptonEncryptionEnabled) {
+        if (this.kyptonEncryptionEnabled) {
             return;
         }
 
