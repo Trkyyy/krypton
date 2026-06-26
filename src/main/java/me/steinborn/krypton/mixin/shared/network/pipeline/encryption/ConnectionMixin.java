@@ -32,7 +32,6 @@ public class ConnectionMixin implements ClientConnectionEncryptionExtension {
 
         this.channel.pipeline().addBefore("splitter", "decrypt", new MinecraftCipherDecoder(decryption));
         this.channel.pipeline().addBefore("prepender", "encrypt", new MinecraftCipherEncoder(encryption));
-
         this.channel.pipeline().fireUserEventTriggered(KryptonPipelineEvent.ENCRYPTION_ENABLED);
 
         this.kryptonEncryptionEnabled = true;
